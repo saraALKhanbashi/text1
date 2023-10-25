@@ -1,0 +1,112 @@
+def print_pattern(rows):
+    for i in range(rows, 0, -1):
+        for j in range(1, i + 1):
+            print("*", end=" ")
+        print()
+
+def rotate_array(arr, n, k):
+    k = k % n  # Ensure k is within the array size
+    rotated_array = arr[-k:] + arr[:-k]
+    return rotated_array
+
+def prints_menu():
+    print('Welcome to the Menu-Based program!')
+
+while True:
+    prints_menu()
+    choice = input("Please select an option:\n 1. Print a Pattern \n 2. Rotate an Array \n 3. Help \n 4. Exit ")
+    if choice == '1':
+        try:
+            rows = int(input("Enter the number of rows for the pattern: "))
+            if rows > 0:
+                print_pattern(rows)
+            else:
+                print("Please enter a positive number.")
+        except ValueError:
+            print("Invalid input. Please enter a positive number.")
+
+    elif choice == '2':
+        try:
+            n = int(input("Enter the number of elements(n): "))
+            k = int(input("Enter the number of steps(k): "))
+            if n > 0:
+                arr = []
+                for i in range(n):
+                    arr.append(int(input(f"Enter element {i + 1}: ")))
+                rotated = rotate_array(arr, n, k)
+                print("Rotated Array:", rotated)
+            else:
+                print("Enter the array elements separated by spaces.")
+        except ValueError:
+            print("Invalid input. Please enter valid numbers.")
+
+    elif choice == '3':
+	    print("---Help ---")
+	    print("option 1: Print Pattern with 'n' rows of decreasing aster ")
+    print("option 2: Rotate an array of 'n' elements to the right by 'k' steps")
+    print("option 3: Display this Help message ")
+    print("option 4: Exit  the program.")
+        
+elif choice == '4':
+    print("Exiting the program.Goodbye!")
+        break      
+        
+
+else:
+        print("Invalid choice. Please select a valid option (1/2/3/4).")
+  out:
+Welcome to the Menu-Based program!
+Please select an option:
+ 1. Print a Pattern 
+ 2. Rotate an Array 
+ 3. Help 
+ 4. Exit 1
+Enter the number of rows for the pattern: 5
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+option 2: Rotate an array of 'n' elements to the right by 'k' steps
+option 3: Display this Help message 
+option 4: Exit  the program.
+Welcome to the Menu-Based program!
+Please select an option:
+ 1. Print a Pattern 
+ 2. Rotate an Array 
+ 3. Help 
+ 4. Exit 2
+Enter the number of elements(n): 7
+Enter the number of steps(k): 3
+Enter element 1: 1
+Enter element 2: 2
+Enter element 3: 4
+Enter element 4: 5
+Enter element 5: 6
+Enter element 6: 7
+Enter element 7: 8
+Rotated Array: [6, 7, 8, 1, 2, 4, 5]
+option 2: Rotate an array of 'n' elements to the right by 'k' steps
+option 3: Display this Help message 
+option 4: Exit  the program.
+Welcome to the Menu-Based program!
+Please select an option:
+ 1. Print a Pattern 
+ 2. Rotate an Array 
+ 3. Help 
+ 4. Exit 3
+---Help ---
+option 1: Print Pattern with 'n' rows of decreasing aster 
+option 2: Rotate an array of 'n' elements to the right by 'k' steps
+option 3: Display this Help message 
+option 4: Exit  the program.
+Welcome to the Menu-Based program!
+Please select an option:
+ 1. Print a Pattern 
+ 2. Rotate an Array 
+ 3. Help 
+ 4. Exit 4
+option 2: Rotate an array of 'n' elements to the right by 'k' steps
+option 3: Display this Help message 
+option 4: Exit  the program.
+Welcome to the Menu-Based program!
